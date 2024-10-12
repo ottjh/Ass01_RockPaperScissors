@@ -43,8 +43,37 @@ public class Main
             }
         } while (incompleteField);
 
-        incompleteField = false;
-        System.out.println("We have escaped test loop 1");
+        incompleteField = false; //Resetting incomplete for the next loop
+        //System.out.println("We have escaped test loop 1"); // Helping to test exiting loop
 
+        //Now time for Player 2
+        do {
+            System.out.print("Player 2 please enter your move[R,P,S]: ");
+            input2 = in.nextLine();
+
+            if (input2.equalsIgnoreCase("r"))
+            {
+                System.out.println("Player 2 has chosen Rock.");
+                incompleteField = false;
+            }
+            else if (input2.equalsIgnoreCase("p"))
+            {
+                System.out.println("Player 2 has chosen Paper.");
+                incompleteField = false;
+            }
+            else if (input2.equalsIgnoreCase("s"))
+            {
+                System.out.println("Player 2 has chosen Scissors.");
+                incompleteField = false;
+            }
+            else
+            {
+                trash = input2;
+                System.out.println("Please enter a valid move [R,P,S] not: " + trash + ".");
+                incompleteField = true;
+            }
+        } while (incompleteField);
+
+        //System.out.println("We have escaped test loop 2"); //testing for exiting loop again
     }
 }
