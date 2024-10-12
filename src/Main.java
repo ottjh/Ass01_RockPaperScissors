@@ -63,6 +63,7 @@ public class Main
             } while (incompleteField);
 
             //System.out.println("We have escaped test loop 2"); //testing for exiting loop again
+            System.out.println("");
 
             if (input1.equalsIgnoreCase("r")) {
                 if (input2.equalsIgnoreCase("r")) {
@@ -91,11 +92,12 @@ public class Main
             }
 
             //now to ask the player if they want to continue playing
-            System.out.println("Enter [Q] to quit, otherwise enter anything else to play again: ");
+            System.out.print("\nEnter [Q] to quit, otherwise enter anything else to play again: ");
             if (in.nextLine().equalsIgnoreCase("q"))
             {
                 playerContinue = false;
             }
+            System.out.println("");
         } while (playerContinue);
     }
 }
